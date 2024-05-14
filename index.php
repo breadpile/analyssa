@@ -22,6 +22,6 @@
     </div>
 
     <!-- Link to the external JavaScript file -->
-    <script src="dataCollection.js"></script>
+    <script src="annalissa.js"></script>
 </body>
 </html>

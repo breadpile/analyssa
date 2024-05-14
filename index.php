@@ -3,17 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Annalissa</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-        }
-        pre {
-            background-color: #f4f4f4;
-            padding: 15px;
-            border-radius: 8px;
-        }
-    </style>
+    <title>Analissa</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <h1>Data Collection Results</h1>

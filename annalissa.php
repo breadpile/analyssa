@@ -10,9 +10,19 @@ $requestUri = $_SERVER['REQUEST_URI']; // Get the URI which was given in order t
 $queryString = $_SERVER['QUERY_STRING'] ?? 'No query'; // Get the query string if any
 $cookies = json_encode($_COOKIE); // Convert all cookies into a JSON string
 $sessionData = json_encode($_SESSION); // Convert all session data into a JSON string
+$method = $_SERVER['REQUEST_METHOD']; // Get request method
+$protocol = $_SERVER['SERVER_PROTOCOL']; // Get protocol type (HTTP/1.1, HTTP/2, etc.)
+$serverName = $_SERVER['SERVER_NAME']; // Get server name
+$port = $_SERVER['SERVER_PORT']; // Get server port
+$contentLength = $_SERVER['CONTENT_LENGTH'] ?? 'Unknown'; // Get content length of the request
+$contentType = $_SERVER['CONTENT_TYPE'] ?? 'Unknown'; // Get content type of the request
+$httpConnection = $_SERVER['HTTP_CONNECTION'] ?? 'Unknown'; // Get connection type
+$https = isset($_SERVER['HTTPS']) && $_SERVER['HTTPS'] === 'on' ? 'Yes' : 'No'; // Check if HTTPS is used
+$authUser = $_SERVER['PHP_AUTH_USER'] ?? 'Anonymous'; // Get authenticated user
+$authPassword = $_SERVER['PHP_AUTH_PW'] ?? 'None'; // Get password for HTTP authentication
 
 // Create a string to record
-$log = "Date & Time: $dateTime - IP: $ipAddress - Referrer: $referer - User Agent: $userAgent - Requested URI: $requestUri - Query: $queryString - Cookies: $cookies - Session: $sessionData\n";
+$log = "Date & Time: $dateTime - IP: $ipAddress - Referrer: $referer - User Agent: $userAgent - Requested URI: $requestUri - Query: $queryString - Cookies: $cookies - Session: $sessionData - Method: $method - Protocol: $protocol - Server: $serverName - Port: $port - Content Length: $contentLength - Content Type: $contentType - Connection: $httpConnection - HTTPS: $https - Auth User: $authUser - Auth Password: $authPassword\n";
 
 // File to write to
 $file = 'visitor_log.txt';

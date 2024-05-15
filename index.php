@@ -11,7 +11,7 @@
     <div id="dataDisplay">
         <pre id="jsonData">Loading data...</pre>
     </div>
-
+    <?php include_once("annalissa.php"); ?>
     <!-- Link to the external JavaScript file -->
     <script src="annalissa.js"></script>
 </body>
